@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /*automatially container in enter both side*/
+    padding: 90px;
+}
+h2{
+    text-align: center;
+    margin: 20px 0;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    width: 32%;
+    position: relative;
+    margin-bottom: 2%;
+    border-radius: 2rem;
+    overflow: hidden;
+    /* margin-bottom: 5px; */
+
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    
+}
+
+.card:hover{
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 10px rgb(48, 48, 48));
+    transition: 0.5s;   
+}
+
+.card:hover img{
+    filter: grayscale(0%);
+}
+
+.card figcaption{
+    position: absolute;
+    right:20%;
+    top: 60%;
+    padding: 25%;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    opacity: 0;
+    border-radius:  0 0 10px 10px ;
+    background: linear-gradient(0deg, black 0% , rbga(255 ,255 ,255) );
+    transition: 0.3s;
+
+}
+
+.card:hover figcaption{
+    opacity: 1;
+    transform: scale(1.03);
+}
